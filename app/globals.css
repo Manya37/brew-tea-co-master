@@ -1,0 +1,264 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Brew Tea Co. palette — https://www.brewteacompany.co.uk/ */
+  --color-brew-cream: #fef9eb;
+  --color-brew-cream-2: #f8f6d7;
+  --color-brew-yellow: #fdcf46;
+  --color-brew-black: #000000;
+  --color-brew-white: #ffffff;
+  --color-brew-grey: #f5f5f5;
+  --color-brew-grey-light: #d1cece;
+  --color-brew-grey-text: #858383;
+  --color-brew-red: #d93333;
+  --color-brew-mint: #b2f9e9;
+  --color-brew-navy: #272d45;
+
+  --color-primary: #fdcf46;
+  --color-on-primary: #000000;
+  --color-primary-container: #f8f6d7;
+  --color-on-primary-container: #000000;
+  --color-primary-fixed: #fdcf46;
+  --color-primary-fixed-dim: #f8f6d7;
+  --color-on-primary-fixed: #000000;
+  --color-on-primary-fixed-variant: #858383;
+  --color-inverse-primary: #fdcf46;
+  --color-surface-tint: #fdcf46;
+
+  --color-secondary: #676986;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #b2f9e9;
+  --color-on-secondary-container: #000000;
+  --color-secondary-fixed: #b2f9e9;
+  --color-secondary-fixed-dim: #9ee8dc;
+  --color-on-secondary-fixed: #000000;
+  --color-on-secondary-fixed-variant: #272d45;
+
+  --color-tertiary: #272d45;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #f8f6d7;
+  --color-on-tertiary-container: #272d45;
+  --color-tertiary-fixed: #f8f6d7;
+  --color-tertiary-fixed-dim: #fef9eb;
+  --color-on-tertiary-fixed: #000000;
+  --color-on-tertiary-fixed-variant: #676986;
+
+  --color-background: #fef9eb;
+  --color-on-background: #000000;
+  --color-surface: #fef9eb;
+  --color-on-surface: #000000;
+  --color-surface-variant: #d1cece;
+  --color-on-surface-variant: #858383;
+  --color-surface-bright: #ffffff;
+  --color-surface-dim: #f5f5f5;
+  --color-surface-container: #f5f5f5;
+  --color-surface-container-low: #fef9eb;
+  --color-surface-container-high: #f8f6d7;
+  --color-surface-container-highest: #d9d9d9;
+  --color-surface-container-lowest: #ffffff;
+
+  --color-inverse-surface: #000000;
+  --color-inverse-on-surface: #ffffff;
+  --color-outline: #858383;
+  --color-outline-variant: #d1cece;
+
+  --color-error: #d93333;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffe5e5;
+  --color-on-error-container: #d93333;
+
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+
+  --spacing-section-gap-desktop: 72px;
+  --spacing-section-gap-mobile: 40px;
+  --spacing-base: 8px;
+  --spacing-grid-margin: 32px;
+  --spacing-grid-gutter: 24px;
+
+  --text-display-xl: 4.063rem;
+  --text-display-xl--line-height: 1.05;
+  --text-display-xl--letter-spacing: -0.02em;
+  --text-display-xl--font-weight: 700;
+
+  --text-headline-lg: 3rem;
+  --text-headline-lg--line-height: 1.1;
+  --text-headline-lg--letter-spacing: -0.01em;
+  --text-headline-lg--font-weight: 700;
+
+  --text-headline-lg-mobile: 2.25rem;
+  --text-headline-lg-mobile--line-height: 1.15;
+  --text-headline-lg-mobile--font-weight: 700;
+
+  --text-headline-md: 1.75rem;
+  --text-headline-md--line-height: 1.2;
+  --text-headline-md--font-weight: 700;
+
+  --text-body-lg: 1.25rem;
+  --text-body-lg--line-height: 1.6;
+  --text-body-lg--font-weight: 400;
+
+  --text-body-md: 1rem;
+  --text-body-md--line-height: 1.6;
+  --text-body-md--font-weight: 400;
+
+  --text-label-bold: 0.875rem;
+  --text-label-bold--line-height: 1.4;
+  --text-label-bold--letter-spacing: 0.06em;
+  --text-label-bold--font-weight: 700;
+
+  --font-display: var(--font-libre-baskerville), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.material-symbols-outlined.fill,
+.icon-fill {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+body {
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-display-xl,
+.font-headline-lg,
+.font-headline-lg-mobile,
+.font-headline-md {
+  font-family: var(--font-libre-baskerville), Georgia, "Times New Roman", serif;
+}
+
+.font-body-lg,
+.font-body-md,
+.font-label-bold {
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+@media (max-width: 767px) {
+  .font-display-xl {
+    font-size: 2.25rem;
+    line-height: 1.1;
+  }
+
+  .font-headline-md {
+    font-size: 1.375rem;
+    line-height: 1.25;
+  }
+}
+
+.page-section {
+  padding-top: var(--spacing-section-gap-mobile);
+  padding-bottom: var(--spacing-section-gap-mobile);
+}
+
+@media (min-width: 768px) {
+  .page-section {
+    padding-top: var(--spacing-section-gap-desktop);
+    padding-bottom: var(--spacing-section-gap-desktop);
+  }
+}
+
+.page-section-tight {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .page-section-tight {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+}
+
+@keyframes compound-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes compound-bar-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.compound-header {
+  opacity: 0;
+  transform: translateY(1rem);
+}
+
+.compound-header.is-visible {
+  animation: compound-fade-up 0.7s ease forwards;
+}
+
+.compound-summary-panel {
+  opacity: 0;
+  transform: translateY(1rem);
+}
+
+.compound-header.is-visible .compound-summary-panel {
+  animation: compound-fade-up 0.7s ease 0.15s forwards;
+}
+
+.compound-card {
+  opacity: 0;
+}
+
+.compound-card.is-visible {
+  animation: compound-fade-up 0.65s ease forwards;
+}
+
+.compound-bar-fill {
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+
+.compound-bar-fill.is-visible {
+  animation: compound-bar-grow 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(var(--bar-index, 0) * 0.12s + 0.25s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .compound-header,
+  .compound-card,
+  .compound-summary-panel {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .compound-bar-fill {
+    transform: scaleX(1);
+    animation: none;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
