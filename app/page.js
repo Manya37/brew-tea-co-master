@@ -2,6 +2,7 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import CompoundsSection from "@/components/CompoundsSection";
 import HeroCarousel from "@/components/HeroCarousel";
+import WaitlistForm from "@/components/WaitlistForm";
 
 const marqueeItems = [
   "Green Tea Leaf",
@@ -327,43 +328,7 @@ export default function HomePage() {
           Tell us what you need. We&apos;ll reach out directly when allocation becomes available for your sector and volume requirement.
         </p>
 
-        <form className="max-w-3xl mx-auto bg-surface-container-low rounded-2xl md:rounded-3xl p-5 sm:p-8 md:p-10 shadow-[0_12px_32px_rgba(0,0,0,0.08)] mb-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <input
-              type="text"
-              placeholder="Company name"
-              className="w-full bg-surface rounded-lg border-2 border-outline-variant px-4 py-3 focus:border-primary focus:ring-0 transition-colors font-body-md text-on-background"
-            />
-            <select
-              defaultValue=""
-              className="w-full bg-surface rounded-lg border-2 border-outline-variant px-4 py-3 focus:border-primary focus:ring-0 transition-colors font-body-md text-on-background"
-            >
-              <option value="" disabled>
-                Sector
-              </option>
-              <option>Phytoextract / Extractor</option>
-              <option>Nutraceuticals</option>
-              <option>Pharma & Ayurvedic</option>
-              <option>Cosmetics & Skincare</option>
-              <option>Food & Beverage</option>
-              <option>Sports Nutrition</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div className="flex flex-col md:flex-row gap-4">
-            <input
-              type="email"
-              placeholder="Work email"
-              className="flex-1 bg-surface rounded-lg border-2 border-outline-variant px-4 py-3 focus:border-primary focus:ring-0 transition-colors font-body-md text-on-background"
-            />
-            <button
-              type="button"
-              className="bg-inverse-surface text-inverse-on-surface font-label-bold text-label-bold px-8 py-3 rounded-lg hover:bg-on-background transition-colors whitespace-nowrap"
-            >
-              Request Allocation
-            </button>
-          </div>
-        </form>
+        <WaitlistForm />
         <p className="font-body-md text-sm text-on-surface-variant mb-8 md:mb-10">
           We respond within 48 hours. No spam. No middlemen. Direct conversation with our supply team.
         </p>

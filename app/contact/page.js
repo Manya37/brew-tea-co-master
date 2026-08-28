@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
 export const metadata = {
@@ -53,96 +54,7 @@ export default function ContactPage() {
                   Fill out the form below and our supply team will get back to you within 48 hours.
                 </p>
               </div>
-              <form className="space-y-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="flex flex-col gap-2 relative">
-                    <label
-                      className="font-label-bold text-xs uppercase tracking-wider text-on-surface-variant absolute -top-3 left-3 bg-surface px-1 z-10"
-                      htmlFor="firstName"
-                    >
-                      First Name
-                    </label>
-                    <input
-                      className="rounded-xl border border-outline-variant bg-transparent px-4 py-4 font-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-all shadow-sm"
-                      id="firstName"
-                      placeholder="Jane"
-                      type="text"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-2 relative">
-                    <label
-                      className="font-label-bold text-xs uppercase tracking-wider text-on-surface-variant absolute -top-3 left-3 bg-surface px-1 z-10"
-                      htmlFor="lastName"
-                    >
-                      Last Name
-                    </label>
-                    <input
-                      className="rounded-xl border border-outline-variant bg-transparent px-4 py-4 font-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-all shadow-sm"
-                      id="lastName"
-                      placeholder="Doe"
-                      type="text"
-                    />
-                  </div>
-                </div>
-                <div className="flex flex-col gap-2 relative">
-                  <label
-                    className="font-label-bold text-xs uppercase tracking-wider text-on-surface-variant absolute -top-3 left-3 bg-surface px-1 z-10"
-                    htmlFor="email"
-                  >
-                    Work Email
-                  </label>
-                  <input
-                    className="rounded-xl border border-outline-variant bg-transparent px-4 py-4 font-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-all shadow-sm"
-                    id="email"
-                    placeholder="jane@example.com"
-                    type="email"
-                  />
-                </div>
-                <div className="flex flex-col gap-2 relative">
-                  <label
-                    className="font-label-bold text-xs uppercase tracking-wider text-on-surface-variant absolute -top-3 left-3 bg-surface px-1 z-10"
-                    htmlFor="subject"
-                  >
-                    What&apos;s this about?
-                  </label>
-                  <select
-                    className="rounded-xl border border-outline-variant bg-transparent px-4 py-4 font-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-all shadow-sm appearance-none"
-                    id="subject"
-                    defaultValue=""
-                  >
-                    <option disabled value="">
-                      Select a topic
-                    </option>
-                    <option>Supply Allocation</option>
-                    <option>Compound Specifications</option>
-                    <option>Partnership Inquiry</option>
-                    <option>Other</option>
-                  </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-on-surface-variant">
-                    <span className="material-symbols-outlined">expand_more</span>
-                  </div>
-                </div>
-                <div className="flex flex-col gap-2 relative">
-                  <label
-                    className="font-label-bold text-xs uppercase tracking-wider text-on-surface-variant absolute -top-3 left-3 bg-surface px-1 z-10"
-                    htmlFor="message"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    className="rounded-xl border border-outline-variant bg-transparent px-4 py-4 font-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-all shadow-sm resize-y min-h-[160px]"
-                    id="message"
-                    placeholder="Tell us about your volume and compound needs..."
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="bg-primary text-on-primary px-8 py-4 rounded-xl font-label-bold text-label-bold hover:bg-surface-tint hover:shadow-md transition-all w-full md:w-auto flex items-center justify-center gap-2"
-                >
-                  Send Message
-                  <span className="material-symbols-outlined text-sm">send</span>
-                </button>
-              </form>
+              <ContactForm />
             </div>
 
             <div className="lg:col-span-5 flex flex-col gap-8">
