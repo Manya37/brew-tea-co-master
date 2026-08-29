@@ -15,7 +15,7 @@ const libreBaskerville = Libre_Baskerville({
 });
 
 export const metadata = {
-  title: "PureLeaf Extracts — India's Green Tea Raw Material Supplier",
+  title: "Densitea — India's Green Tea Raw Material Supplier",
   description:
     "Premium high-polyphenol Camellia sinensis raw material for extract manufacturers, nutraceuticals, pharma, and cosmetics. One fixed rate. All-year supply.",
 };
