@@ -14,10 +14,46 @@ const libreBaskerville = Libre_Baskerville({
   weight: ["400", "700"],
 });
 
+const siteUrl = "https://www.densitea.in";
+const title = "Densitea — India's Green Tea Raw Material Supplier";
+const description =
+  "Premium high-polyphenol Camellia sinensis raw material for extract manufacturers, nutraceuticals, pharma, and cosmetics. One fixed rate. All-year supply.";
+
 export const metadata = {
-  title: "Densitea — India's Green Tea Raw Material Supplier",
-  description:
-    "Premium high-polyphenol Camellia sinensis raw material for extract manufacturers, nutraceuticals, pharma, and cosmetics. One fixed rate. All-year supply.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "96x96" },
+      { url: "/fav-icon.png", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: "/favicon.ico",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: siteUrl,
+    siteName: "Densitea",
+    title,
+    description,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 512,
+        height: 512,
+        alt: "Densitea logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title,
+    description,
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({ children }) {

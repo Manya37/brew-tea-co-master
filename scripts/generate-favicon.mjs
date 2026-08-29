@@ -1,9 +1,13 @@
 import sharp from "sharp";
+import toIco from "to-ico";
+import { writeFileSync } from "fs";
 import { resolve } from "path";
 
 const input = resolve("public/fav-icon.png");
 const iconOutput = resolve("app/icon.png");
 const appleOutput = resolve("app/apple-icon.png");
+const faviconOutput = resolve("app/favicon.ico");
+const ogOutput = resolve("public/og-image.png");
 
 const { data, info } = await sharp(input).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
 const W = info.width;
@@ -55,5 +59,12 @@ const square = await sharp(input)
 
 await sharp(square).resize(96, 96).png().toFile(iconOutput);
 await sharp(square).resize(180, 180).png().toFile(appleOutput);
+await sharp(square).resize(512, 512).png().toFile(ogOutput);
 
-console.log(`Favicon set from fav-icon.png → ${iconOutput} (96px), ${appleOutput}`);
+const icoSizes = [16, 32, 48];
+const icoBuffers = await Promise.all(
+  icoSizes.map((size) => sharp(square).resize(size, size).png().toBuffer())
+);
+writeFileSync(faviconOutput, await toIco(icoBuffers));
+
+console.log(`Wrote ${iconOutput}, ${appleOutput}, ${faviconOutput}, ${ogOutput}`);
