@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import BrandMark from "@/components/BrandMark";
 
 const navLinks = [
   { href: "/about", label: "About Us" },
@@ -70,14 +71,8 @@ export default function Navbar() {
           />
         )}
 
-        <div className="relative z-50 flex justify-between items-center gap-3 px-4 sm:px-grid-margin py-3 md:py-4 max-w-[1440px] mx-auto w-full">
-          <Link
-            href="/"
-            onClick={closeMenu}
-            className="font-headline-md text-lg sm:text-xl md:text-headline-md tracking-tight text-on-surface shrink-0"
-          >
-            Pure<span className="text-primary">Leaf</span> Extracts
-          </Link>
+        <div className="relative z-50 flex justify-between items-center gap-3 px-4 sm:px-grid-margin h-16 sm:h-[72px] max-w-[1440px] mx-auto w-full">
+          <BrandMark onClick={closeMenu} showText className="min-w-0" />
 
           <div className="hidden md:flex items-center gap-5 lg:gap-8">
             {navLinks.map((link) => (
