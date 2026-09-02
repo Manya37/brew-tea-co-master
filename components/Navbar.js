@@ -52,7 +52,7 @@ export default function Navbar() {
         <div className="fixed top-0 left-0 right-0 z-[60] h-10 bg-primary border-b border-on-primary/10 px-4 sm:px-grid-margin flex items-center justify-center gap-3">
           <span className="w-2 h-2 rounded-full bg-on-primary animate-pulse shrink-0" />
           <p className="font-label-bold text-label-bold text-on-primary uppercase tracking-wider text-center text-[10px] sm:text-xs md:text-sm leading-tight">
-            Supply slots for 2025–2026 are filling fast — limited allocation remaining
+            Supply slots for 2026–27 are filling fast — limited allocation remaining
           </p>
         </div>
       )}

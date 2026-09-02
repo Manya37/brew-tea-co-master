@@ -9,8 +9,22 @@ export default function Footer() {
         <p className="font-body-md text-body-md text-inverse-on-surface/80">
           India&apos;s Green Tea Raw Material Supplier — Est. for extract manufacturing
         </p>
+        <div className="flex flex-col gap-2 mt-1">
+          <a
+            href="tel:+919915050493"
+            className="font-body-md text-body-md text-inverse-on-surface/80 hover:text-primary transition-colors"
+          >
+            +91 99150 50493
+          </a>
+          <a
+            href="mailto:hello@densitea.in"
+            className="font-body-md text-body-md text-inverse-on-surface/80 hover:text-primary transition-colors"
+          >
+            hello@densitea.in
+          </a>
+        </div>
         <p className="font-body-md text-body-md text-inverse-on-surface/60 mt-2">
-          © 2025 PureLeaf Extracts. All rights reserved.
+          © 2026 Densitea. All rights reserved.
         </p>
       </div>
       <div className="flex flex-wrap gap-8 md:gap-12">

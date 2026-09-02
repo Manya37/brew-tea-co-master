@@ -4,7 +4,7 @@ import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Contact Us | PureLeaf Extracts",
+  title: "Contact Us | Densitea",
   description:
     "Got a question about our raw material supply? Need help with allocation? We're all ears.",
 };
@@ -26,6 +26,22 @@ export default function ContactPage() {
               <p className="font-body-lg text-body-lg text-on-surface-variant">
                 Got a question about our compounds? Need help with allocation? Or ready to discuss annual supply contracts? We&apos;re all ears.
               </p>
+              <div className="flex flex-col gap-3 mt-2">
+                <a
+                  href="tel:+919915050493"
+                  className="inline-flex items-center gap-2 font-body-md text-on-surface hover:text-primary transition-colors"
+                >
+                  <span className="material-symbols-outlined text-lg">call</span>
+                  +91 99150 50493
+                </a>
+                <a
+                  href="mailto:hello@densitea.in"
+                  className="inline-flex items-center gap-2 font-body-md text-on-surface hover:text-primary transition-colors"
+                >
+                  <span className="material-symbols-outlined text-lg">mail</span>
+                  hello@densitea.in
+                </a>
+              </div>
             </div>
             <div className="md:col-span-7 relative h-[280px] sm:h-[360px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl">
               <div className="absolute inset-0 bg-primary/10 mix-blend-multiply z-10" />

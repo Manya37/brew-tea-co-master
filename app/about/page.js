@@ -3,7 +3,7 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "About Us | PureLeaf Extracts",
+  title: "About Us | Densitea",
   description:
     "45 years of Indian tea expertise from Amritsar to global export. Premium Assam CTC, Darjeeling, wellness blends, and extract-grade raw material.",
 };
@@ -117,9 +117,9 @@ export default function AboutPage() {
   return (
     <>
       <main>
-        {/* Hero — centered over full image */}
-        <section className="relative w-full min-h-[52vh] sm:min-h-[58vh] flex items-start justify-center overflow-hidden px-4 sm:px-grid-margin pt-24 sm:pt-28 pb-10 md:pb-12">
-          <div className="absolute inset-0 z-0">
+        {/* Hero */}
+        <section className="relative w-full overflow-hidden">
+          <div className="absolute inset-0 z-0 min-h-[78vh] sm:min-h-[82vh]">
             <Image
               src="/about-us.png"
               alt="Premium Indian tea — Densitea export portfolio"
@@ -128,31 +128,25 @@ export default function AboutPage() {
               className="object-cover object-center"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-black/65" />
-            <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" />
           </div>
 
-          <div className="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center">
-            <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md text-white px-4 py-2 rounded-full w-fit mb-4 border border-white/20">
-              <span className="material-symbols-outlined text-sm">local_cafe</span>
-              <span className="font-label-bold text-xs uppercase tracking-wider">Densitea · Since Punjab</span>
-            </div>
-
-            <h1 className="font-display-xl text-display-xl text-white mb-4 leading-[1.08] drop-shadow-sm">
+          <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center justify-center min-h-[78vh] sm:min-h-[82vh] px-4 sm:px-grid-margin pt-28 sm:pt-32 pb-20 sm:pb-24">
+            <h1 className="font-display-xl text-display-xl text-white mb-5 sm:mb-6 leading-[1.08] drop-shadow-md">
               Taste the Legacy.
-              <span className="block text-primary mt-1">Sip Something Superior.</span>
+              <span className="block text-primary mt-2 sm:mt-3">Sip Something Superior.</span>
             </h1>
 
-            <p className="font-body-lg text-body-lg text-white/90 mb-3 max-w-2xl mx-auto leading-relaxed">
+            <p className="font-body-lg text-body-lg text-white/90 mb-5 max-w-2xl mx-auto leading-relaxed">
               Crafted for those who know the difference. From a family tea business in Amritsar to a third-generation
               export house — authentic Indian teas for buyers worldwide.
             </p>
 
-            <p className="font-label-bold text-xs uppercase tracking-wider text-primary mb-6">
+            <p className="font-label-bold text-xs uppercase tracking-wider text-primary mb-8 sm:mb-10">
               KCBL · Amritsar · Est. 45+ Years
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 justify-center w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center w-full sm:w-auto">
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-8 py-3.5 rounded-xl font-label-bold text-label-bold hover:bg-primary/90 transition-colors shadow-lg"
@@ -170,8 +164,9 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Our Story — enhanced two-column */}
-        <section className="py-10 md:py-14 px-4 sm:px-grid-margin bg-surface-container-low">
+        {/* Our Story */}
+        <section className="relative py-12 md:py-16 px-4 sm:px-grid-margin bg-surface-container-low">
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-outline-variant to-transparent" />
           <div className="max-w-[1440px] mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
               <div className="lg:col-span-5 lg:sticky lg:top-28">
