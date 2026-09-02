@@ -1,10 +1,13 @@
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Thank You | PureLeaf Extracts",
-  description: "Your message has been received. Our team will get back to you soon.",
-};
+export const metadata = createPageMetadata({
+  title: "Thank You",
+  description: "Your message has been received. The Densitea team will respond shortly.",
+  path: "/thank-you",
+  noIndex: true,
+});
 
 const copy = {
   contact: {

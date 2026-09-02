@@ -3,6 +3,22 @@ import Footer from "@/components/Footer";
 import CompoundsSection from "@/components/CompoundsSection";
 import HeroCarousel from "@/components/HeroCarousel";
 import WaitlistForm from "@/components/WaitlistForm";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  title: "Green Tea Raw Material Supplier India | EGCG & Extract-Grade Leaf",
+  description:
+    "Densitea supplies premium Camellia sinensis raw material for green tea extract, nutraceutical, pharma & cosmetic manufacturers. High EGCG, polyphenols & year-round supply from Amritsar.",
+  path: "/",
+  keywords: [
+    "green tea extract raw material",
+    "tea leaf supplier Punjab",
+    "bulk tea export India",
+    "L-theanine supplier",
+    "black tea waste extract",
+    "nutraceutical tea supplier",
+  ],
+});
 
 const marqueeItems = [
   "Green Tea Leaf",

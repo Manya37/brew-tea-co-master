@@ -1,12 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "About Us | Densitea",
+export const metadata = createPageMetadata({
+  title: "About Densitea | 45+ Years Tea Export from Amritsar, Punjab",
   description:
-    "45 years of Indian tea expertise from Amritsar to global export. Premium Assam CTC, Darjeeling, wellness blends, and extract-grade raw material.",
-};
+    "Family-owned tea export house since Punjab. Assam CTC, Darjeeling, herbal wellness blends & extract-grade green tea leaf. KCBL — trusted across 12+ global markets.",
+  path: "/about",
+  keywords: [
+    "tea export Amritsar",
+    "Assam CTC bulk supplier",
+    "Darjeeling tea export",
+    "KCBL tea company",
+    "Indian tea wholesaler",
+    "herbal tea manufacturer India",
+  ],
+});
 
 const stats = [
   { num: "45+", label: "Years in tea", icon: "history" },

@@ -1,6 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  title: "Green Tea Extract Raw Material Grades | EGCG, Polyphenols & Theaflavins",
+  description:
+    "Extract-grade green & black tea waste specifications: EGCG 10–15%, total polyphenols 25–35%, L-theanine, theaflavins & thearubigins. COA on every batch. Fixed annual rates.",
+  path: "/extracts",
+  keywords: [
+    "green tea extract grades",
+    "EGCG raw material",
+    "theaflavins supplier",
+    "black tea waste extract",
+    "pharma grade tea leaf",
+    "nutraceutical raw material specs",
+  ],
+});
 
 const trustBadges = [
   { icon: "verified", label: "COA on Every Batch" },
@@ -160,12 +176,6 @@ const benefits = [
   "Single supplier for green leaf + black tea waste",
   "Grade matched to your extraction target (EGCG, TF, L-Theanine)",
 ];
-
-export const metadata = {
-  title: "Green Tea Extracts — Raw Material Grades | PureLeaf Extracts",
-  description:
-    "Extract-grade green tea leaf and black tea waste raw material. Polyphenol, EGCG, L-Theanine, theaflavin and thearubigin specifications for extract manufacturers.",
-};
 
 function SpecTable({ title, subtitle, headers, rows, rowKey = "name" }) {
   return (

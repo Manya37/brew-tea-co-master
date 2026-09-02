@@ -2,12 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Contact Us | Densitea",
+export const metadata = createPageMetadata({
+  title: "Contact Densitea | Export & Allocation Enquiries",
   description:
-    "Got a question about our raw material supply? Need help with allocation? We're all ears.",
-};
+    "Contact Densitea for bulk tea export, extract-grade leaf allocation & annual supply contracts. Call +91 99150 50493 or email hello@densitea.in. Response within 48 hours.",
+  path: "/contact",
+  keywords: [
+    "contact tea exporter India",
+    "tea allocation enquiry",
+    "bulk tea quote",
+    "extract grade tea contact",
+  ],
+});
 
 export default function ContactPage() {
   return (
